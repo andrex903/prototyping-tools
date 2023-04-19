@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ce5e3813c6fbe32429343fda15018579
+guid: fa15b5312f75067478f95a0f71b7bef7
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
@@ -865,7 +865,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: d7115cbb97080d543a04224a7ba59420,
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: b9e707fcd34977b45a9edaec48639754,
     type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2

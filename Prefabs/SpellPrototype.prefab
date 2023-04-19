@@ -45,11 +45,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 527313066807073050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a01ff9031b2d0465caf04e756dd3e7ae, type: 3}
+  m_Script: {fileID: 11500000, guid: 68476894bb8107046a19ac48b63a395d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  particle: {fileID: 208737821719089317, guid: d6e9446de3f61464ab00e5cfb3303a95, type: 3}
+  particle: {fileID: 208737821719089317, guid: 3f3c6029d583a3a49bb034ea0ed446dd, type: 3}
 --- !u!135 &1652250739472669537
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -269,7 +269,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f6f5fa47bed385e448e3364e2a253fdb, type: 2}
+  - {fileID: 2100000, guid: 1eee59dbf7054124fb70d908b2c9fd90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
