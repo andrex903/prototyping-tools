@@ -1,0 +1,11 @@
+{
+  "name": "com.redeev.prototyping",
+  "displayName": "Prototyping Tools",
+  "version": "1.0.0",
+  "unity": "2021.3",
+  "keywords": [
+    "prototyping"
+  ],
+  "category": "tools",
+  "description": "A group of useful tools for prototyping."
+}
