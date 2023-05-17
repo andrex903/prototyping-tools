@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Redeev.PrototypingTools
 {
-    public static class NewBehaviourScript
+    public static class EditorExtensions
     {
         [MenuItem("GameObject/Create Player Prototype")]
         public static void CreatePlayerPrototype()
