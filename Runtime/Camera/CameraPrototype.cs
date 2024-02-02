@@ -4,7 +4,7 @@ namespace Redeev.PrototypingTools
 {
     public class CameraPrototype : MonoBehaviour
     {
-        [SerializeField] Transform target;
+        public Transform target;
 
         public Vector3 offset = new(-3f, 6f, -3f);
         public float fieldOfView = 55f;
@@ -26,7 +26,7 @@ namespace Redeev.PrototypingTools
 
         private void CenterCamera()
         {
-            transform.SetPositionAndRotation(target.position + offset, Quaternion.LookRotation(target.position - transform.position));
+            if (target) transform.SetPositionAndRotation(target.position + offset, Quaternion.LookRotation(target.position - transform.position));
         }
 
         private void Update()
