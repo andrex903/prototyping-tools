@@ -24,7 +24,7 @@ namespace Redeev.PrototypingTools
             CenterCamera();
         }
 
-        private void CenterCamera()
+        public void CenterCamera()
         {
             if (target) transform.SetPositionAndRotation(target.position + offset, Quaternion.LookRotation(target.position - transform.position));
         }
