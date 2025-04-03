@@ -1,4 +1,7 @@
 using UnityEngine;
+#if ENABLE_INPUT_SYSTEM
+using UnityEngine.InputSystem;
+#endif
 
 namespace Redeev.PrototypingTools
 {
@@ -21,7 +24,15 @@ namespace Redeev.PrototypingTools
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space)) animations.Attack(1);
+#if ENABLE_INPUT_SYSTEM
+
+            if (Keyboard.current.spaceKey.wasPressedThisFrame)
+#else
+                if (Input.GetKeyDown(KeyCode.Space))
+#endif
+            {
+                animations.Attack(1);
+            }
         }
     }
 }

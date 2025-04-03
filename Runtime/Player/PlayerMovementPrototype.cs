@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
-using UnityEngine.AI;
+#if ENABLE_INPUT_SYSTEM
+using UnityEngine.InputSystem;
+#endif
 
 namespace Redeev.PrototypingTools
 {
@@ -20,8 +22,6 @@ namespace Redeev.PrototypingTools
         private static readonly string VERTICAL = "Vertical";
 
         private bool isMoving = false;
-
-        private NavMeshHit hit;
 
         private bool inputMovement = false;
         public bool InputMovement => inputMovement;
@@ -55,8 +55,28 @@ namespace Redeev.PrototypingTools
         {
             if (!IsInitialized) return;
 
+#if ENABLE_INPUT_SYSTEM
+            inputVector = new Vector3();
+            if (Keyboard.current.wKey.isPressed)
+            {
+                inputVector += new Vector3(0, 1, 0);
+            }
+            else if (Keyboard.current.sKey.isPressed)
+            {
+                inputVector += new Vector3(0, -1, 0);
+            }
 
+            if (Keyboard.current.aKey.isPressed)
+            {
+                inputVector += new Vector3(-1, 0, 0);
+            }
+            else if (Keyboard.current.dKey.isPressed)
+            {
+                inputVector += new Vector3(1, 0, 0);
+            }
+#else
             inputVector = new Vector3(Input.GetAxis(HORIZONTAL), Input.GetAxis(VERTICAL));
+#endif
             inputMovement = (inputVector.magnitude >= 0.2f);
 
             playerAnimations.SetMovement(inputMovement);
